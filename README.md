@@ -104,7 +104,8 @@ python.exe tests\test_data_methods_unittest.py
 
 You should see below result:
 
-![](docs\test_data_methods_unittest.png)
+
+![unittest](https://github.com/aliie62/paranuara_planet/blob/master/docs/test_data_methods_unittest.png)
 
 To preprocess `people.json` and `companies.json` files  and load them into database, run below code in the project virtual environment.
 
@@ -114,11 +115,11 @@ python preprocessing\preprocessing.py
 
 If there is any food (vegetable or fruit) that has not been found in the database, you should see below output. You need to run `update_foods.py` in folder [preprocessing](preprocessing) to update fruit/vegetable collection.
 
-![](docs\preprocessing_error.png)
+![failure](https://github.com/aliie62/paranuara_planet/blob/master/docs/preprocessing_error.png)
 
 If everything goes well, you should see below output:
 
-![](docs\preprocessing_success.png)
+![success](https://github.com/aliie62/paranuara_planet/blob/master/docs/preprocessing_success.png)
 
 **Note**: People username is extracted from their email address.
 
@@ -136,7 +137,7 @@ python.exe app.py
 
 This will run the *app* on `http://127.0.0.1:5000`.
 
-![](docs\app.png)
+![app](https://github.com/aliie62/paranuara_planet/blob/master/docs/app.png)
 
 **Endpoints** documentations and their examples are exported as json in [`postman_collection.json`](docs). This file should be imported into Postman. To learn more, click [here]().
 
