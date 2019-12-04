@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "50bee75c-a2ec-4bef-87ab-7d5cddfa12dd",
+		"name": "Paranuara Planet",
+		"description": "This collection contains endpoints for Paranuara planet.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/people/{username}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6f37e1a4-4fe8-48bc-b0fa-484f888363f3",
+						"exec": [
+							"pm.test(\"Check the username value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.username).to.eql(\"bonniebass\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/people/bonniebass",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"people",
+						"bonniebass"
+					]
+				},
+				"description": "This endpoint returns person details using the provided the username."
+			},
+			"response": [
+				{
+					"name": "/people/{username}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/people/bonniebass",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"people",
+								"bonniebass"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "174"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.0 Python/3.7.3"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2019 11:15:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"bonniebass\",\n    \"age\": 54,\n    \"fruits\": [\n        \"banana\",\n        \"orange\",\n        \"strawberry\"\n    ],\n    \"vegetables\": [\n        \"beetroot\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/company/{name}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f482946f-603d-44c6-a01f-b1c42c7cb874",
+						"exec": [
+							"pm.test(\"Check the username value\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.company).to.eql(\"MINGA\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/company/minga",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"company",
+						"minga"
+					]
+				},
+				"description": "This endpoint returns a company with the list of its employees."
+			},
+			"response": [
+				{
+					"name": "/company/{name}",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/company/minga",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"company",
+								"minga"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1304"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.0 Python/3.7.3"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2019 11:15:03 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"company\": \"MINGA\",\n    \"employees\": [\n        {\n            \"index\": 17,\n            \"name\": \"Lindsay Harrington\"\n        },\n        {\n            \"index\": 41,\n            \"name\": \"Penny Oneill\"\n        },\n        {\n            \"index\": 65,\n            \"name\": \"Carter Curtis\"\n        },\n        {\n            \"index\": 66,\n            \"name\": \"Mack Gilbert\"\n        },\n        {\n            \"index\": 186,\n            \"name\": \"Glenda Keith\"\n        },\n        {\n            \"index\": 241,\n            \"name\": \"Dudley Fischer\"\n        },\n        {\n            \"index\": 269,\n            \"name\": \"Carpenter Mccoy\"\n        },\n        {\n            \"index\": 360,\n            \"name\": \"Evangeline Lamb\"\n        },\n        {\n            \"index\": 435,\n            \"name\": \"Evans Pearson\"\n        },\n        {\n            \"index\": 511,\n            \"name\": \"Green Short\"\n        },\n        {\n            \"index\": 690,\n            \"name\": \"Genevieve Golden\"\n        },\n        {\n            \"index\": 721,\n            \"name\": \"Saundra Snider\"\n        },\n        {\n            \"index\": 738,\n            \"name\": \"Horn West\"\n        },\n        {\n            \"index\": 821,\n            \"name\": \"Snider Kirkland\"\n        },\n        {\n            \"index\": 884,\n            \"name\": \"Stephanie Herrera\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "/people",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4e1cf9d-236e-4a8d-97fa-3f6629620a40",
+						"exec": [
+							"pm.test(\"Check person 1 name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.person_1.name).to.eql(\"Decker Mckenzie\");\r",
+							"});\r",
+							"pm.test(\"Check person 2 name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.person_2.name).to.eql(\"Bonnie Bass\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username1\": \"deckermckenzie\",\n\t\"username2\": \"bonniebass\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/people",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"people"
+					]
+				},
+				"description": "This endpoint returns details of people for two provided usernames align with thier *live* firends with *brown* eye!\n"
+			},
+			"response": [
+				{
+					"name": "/people",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username1\": \"deckermckenzie\",\n\t\"username2\": \"bonniebass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/people",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.0 Python/3.7.3"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 04 Dec 2019 11:14:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"person_1\": {\n        \"name\": \"Decker Mckenzie\",\n        \"age\": 60,\n        \"address\": \"492 Stockton Street, Lawrence, Guam, 4854\",\n        \"phone\": \"+1 (893) 587-3311\"\n    },\n    \"person_2\": {\n        \"name\": \"Bonnie Bass\",\n        \"age\": 54,\n        \"address\": \"455 Dictum Court, Nadine, Mississippi, 6499\",\n        \"phone\": \"+1 (823) 428-3710\"\n    },\n    \"friends\": [\n        \"Decker Mckenzie\"\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5c234de3-1a54-40e5-90b5-e2d5d9608306",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "df4de3c5-6d86-4b84-b82c-156a6e52021a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
