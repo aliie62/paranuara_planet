@@ -48,17 +48,17 @@ To set up project environment, below steps should be followed:
    ```
 
    ```
-   db.createUser({user:"hivery",pwd:"test2019",roles:[{role:"readWrite", db:"paranuara"}]})
+   db.createUser({user:"testuser",pwd:"testpass",roles:[{role:"readWrite", db:"paranuara"}]})
    ```
 
-   **Note**: Please note that we use `hivery` as user and `test2019` as password. However, you are free to choose whatever you want. But, apply any changes in the rest of configuration accordingly.
+   **Note**: Please note that we use `testuser` as user and `testpass` as password. However, you are free to choose whatever you want. But, apply any changes in the rest of configuration accordingly.
 
 7. Add below variables to the user *Environment Variables* for the database connection string. This helps to avoid passing the credential every time we run the application.
 
    | Key           | Value                                                        |
    | ------------- | ------------------------------------------------------------ |
-   | MongoURI      | mongodb://hivery:test2019@127.0.0.1:27017/?authSource=paranuara&authMechanism=SCRAM-SHA-256 |
-   | Mongo_Databse | paranuara                                                    |
+   | MongoURI      | mongodb://testuser:testpass@127.0.0.1:27017/?authSource=paranuara&authMechanism=SCRAM-SHA-256 |
+   | Mongo_Database | paranuara                                                    |
 
    **Note 1**: Note that `127.0.0.1:27017` is related to our local MongoDB instance. If you are using different instance on the cloud or you installed it on different server/port, toy should change this part 
 
@@ -75,11 +75,11 @@ In this section, we prepare and process the datasets and initialise our database
 Two new JSON files have prepared by using data from [Vegetables Fruits Grains](http://vegetablesfruitsgrains.com/). thses files are stored in [files](files) folder. to import them, we should run below commands in the server that hosts our MongoDB instance. Open Command Prompt window and run these commands:
 
 ```
-mongoimport --db paranuara --collection vegetable --authenticationDatabase paranuara --username hivery --password test2019 --drop --file [PROJECT PATH]\files\vegetable.json --jsonArray
+mongoimport --db paranuara --collection vegetable --authenticationDatabase paranuara --username testuser --password testpass --drop --file [PROJECT PATH]\files\vegetable.json --jsonArray
 ```
 
 ```
-mongoimport --db paranuara --collection fruit --authenticationDatabase paranuara --username hivery --password test2019 --drop --file [PROJECT PATH]\files\fruit.json --jsonArray
+mongoimport --db paranuara --collection fruit --authenticationDatabase paranuara --username testuser --password testpass --drop --file [PROJECT PATH]\files\fruit.json --jsonArray
 ```
 
 **Note**: Replace `[PROJECT PATH]` with the real path of project in the commands above.
