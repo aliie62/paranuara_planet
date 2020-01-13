@@ -23,22 +23,6 @@ class Person(object):
             return {"username":person["username"],"age":person["age"],"fruits":person["fruits"],"vegetables":person["vegetables"]}
         else:
             return person
-
-    @staticmethod
-    def find_by_username2(username:str):
-        person = get_one_document('people',{'username':username})
-        if person:
-            fruit_ids = [item['index'] for item in person["fruits"]]
-            vegetable_ids = [item['index'] for item in person['vegetables']]
-            fruit_docs = get_documents('fruit',{'index':{'$in':fruit_ids}})
-            fruits = [fruit['name'] for fruit in fruit_docs]
-            vegetable_docs = get_documents('vegetable',{'index':{'$in':vegetable_ids}})
-            vegetables = [vegetable['name'] for vegetable in vegetable_docs]
-            person['fruits'] = fruits
-            person['vegetables'] = vegetables
-            return {"username":person["username"],"age":person["age"],"fruits":person["fruits"],"vegetables":person["vegetables"]}
-        else:
-            return person
     
     @staticmethod
     def find_two(username1:str, username2:str):
